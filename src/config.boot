@@ -376,14 +376,6 @@ interfaces {
     }
 }
 service {
-    bcast-relay {
-        id 1 {
-            description "Chromecast relay"
-            interface eth2
-            interface eth3
-            port 1900
-        }
-    }
     dhcp-server {
         disabled false
         hostfile-update disable
@@ -459,15 +451,14 @@ service {
             cache-size 400
             listen-on eth2
             listen-on eth4
-            name-server 208.67.222.222
-            name-server 208.67.220.220
+            name-server X.X.X.X
         }
     }
     gui {
         http-port 80
         https-port 443
         listen-address 192.168.1.1
-        older-ciphers enable
+        older-ciphers disable
     }
     mdns {
         repeater {
@@ -546,5 +537,5 @@ system {
 
 
 /* Warning: Do not remove the following line. */
-/* === vyatta-config-version: "config-management@1:conntrack@1:cron@1:dhcp-relay@1:dhcp-server@4:firewall@5:ipsec@5:nat@3:qos@1:quagga@2:system@4:ubnt-pptp@1:ubnt-udapi-server@1:ubnt-unms@1:ubnt-util@1:vrrp@1:webgui@1:webproxy@1:zone-policy@1" === */
-/* Release version: v1.10.6.5112659.180809.0658 */
+/* === vyatta-config-version: "config-management@1:conntrack@1:cron@1:dhcp-relay@1:dhcp-server@4:firewall@5:ipsec@5:nat@3:qos@1:quagga@2:suspend@1:system@4:ubnt-pptp@1:ubnt-udapi-server@1:ubnt-unms@1:ubnt-util@1:vrrp@1:webgui@1:webproxy@1:zone-policy@1" === */
+/* Release version: v1.10.8.5142441.181120.1647 */
